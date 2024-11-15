@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #0A3D62;
+    --light-color: #FFFFFF;
+    --dark-color: #333333;
+    --highlight-color: #00b7ff;
+    --text-color: #000000;
+    --gradient-primary: linear-gradient(to right, #1E90FF, #0A3D62);
+    --gradient-secondary: linear-gradient(to right, #FF4500, #FF6347);
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--neutral-light);
+    padding: 2rem 1rem;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: var(--secondary-color);
+    padding: 0.5rem 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+nav a {
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--highlight-color);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px #00b7ff(67, 204, 197, 0.815);
+}
+
+img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--light-color);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    color: var(--dark-color);
+}
+
+section.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+    color: var(--highlight-color);
+}
+
+
+footer {
+    text-align: center;
+    background: var(--secondary-color);
+    color: var(--neutral-light);
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
